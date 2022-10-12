@@ -71,8 +71,7 @@ def report_daily(data, date):
 
     for key in data:
         if key[0:8] == date:
-            h = key[0:8]
-            m = calendar.month_name[int(h[4:6])] + " " + str(int(h[6:8])) + ", " + str(int(h[0:4]))
+            m = calendar.month_name[int(key[4:6])] + " " + str(int(key[6:8])) + ", " + str(int(key[0:4]))
             time = key[8:10] + ":" + key[10:12] + ":" + key[12:14]
             temp = data[key]['t']
             humidity = data[key]['h']
